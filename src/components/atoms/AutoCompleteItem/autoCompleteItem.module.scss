@@ -1,0 +1,17 @@
+.container {
+    padding: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.imageAndLabel {
+    display: flex;
+    gap: 0.5rem;
+
+}
+
+.selected {
+    background-color: #ADD8E6;
+    border-radius: 0.5rem;
+}

@@ -1,0 +1,61 @@
+.container {
+    display: block;
+    border-radius: 7px;
+    position: relative;
+    transition: background 0.3s ease;
+}
+
+
+.inputContainer {
+    position: relative;
+}
+
+.searchIcon {
+    position: absolute;
+    z-index: 2;
+    left: 10px;
+    font-size: 20px;
+    width: 20px;
+    margin-left: -3.5px;
+    text-align: center;
+    padding: 12px 4px;
+    top: 1px
+}
+
+.input {
+    width: 100%;
+    border: none;
+    background-color: #DEDEDE;
+    height: 3rem;
+    border-radius: 0.5rem;
+
+    padding: 10px 10px 10px 40px;
+    font-size: 12px;
+    line-height: 1.5;
+
+
+}
+
+.suggestionContainer {
+    position: absolute;
+    top: 4rem;
+    left: 0px;
+    z-index: 999999;
+    cursor: pointer;
+    width: 100%;
+    max-height: 200px;
+    overflow: auto;
+
+
+}
+
+.suggestion {
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 100%;
+    border: 1px solid #DEDEDE;
+    border-radius: 0.4rem;
+    box-shadow: 0.5rem 0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.04), 0 4px 4px 0 rgba(0, 0, 0, 0.1);
+}

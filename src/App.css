@@ -1,0 +1,9 @@
+body {
+    font-family: sans-serif;
+    min-height: 100vh;
+    display: flex;
+}
+
+body>div {
+    margin: auto;
+}

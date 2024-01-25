@@ -1,0 +1,27 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+}
+
+.imageLabelContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.removeButton {
+    background: none;
+    border: none;
+    color: #bcbcbc;
+    font-size: 10px;
+
+}
+
+.cross {
+    color: red;
+}
