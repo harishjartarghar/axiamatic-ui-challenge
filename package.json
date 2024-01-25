@@ -1,0 +1,29 @@
+{
+  "name": "axiamatic",
+  "version": "1.0.0",
+  "description": "Axiamatic UI Task",
+  "main": "index.js",
+  "repository": "https://github.com/harishjartarghar/axiamatic-ui-challenge",
+  "scripts": {
+    "start": "webpack-dev-server --mode development --open",
+    "build": "webpack --mode production"
+  },
+  "author": "Harish",
+  "license": "MIT",
+  "dependencies": {
+    "@babel/core": "^7.23.7",
+    "@babel/plugin-syntax-jsx": "^7.23.3",
+    "@babel/preset-react": "^7.23.3",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "html-loader": "^5.0.0",
+    "html-webpack-plugin": "^5.6.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "webpack": "^5.90.0",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.1"
+  }
+}
