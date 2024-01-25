@@ -20,26 +20,33 @@ const AutoCompleteInput = ({
     const [selectedVal, setSelectedVal] = useState("");
 
     const handler = e => {
-        const filteredData = data.filter(({ label = '' }) => {
-            const value = (e.target.value).toLowerCase();
-            const lowerCaseLabel = label.toLowerCase();
-            return lowerCaseLabel.startsWith(value);
-        });
-        setSugesstions(filteredData);
+
     };
 
     const handleChange = e => {
         const input = e.target.value;
+        const value = input.toLowerCase();
+
+
+        const filteredData = data.filter(({ label = '' }) => {
+
+            const lowerCaseLabel = label.toLowerCase();
+            return lowerCaseLabel.startsWith(value);
+        });
+
         setSelectedVal(input);
+        setSugesstions(filteredData);
+        const shouldShowSuggestion = !!input && filteredData.length > 0
+        toggleSuggestions(shouldShowSuggestion)
+
+
     };
 
     const handleClick = (id, value) => {
         onSelected(id, value);
     };
 
-    const handleFocus = () => {
-        toggleSuggestions(true);
-    }
+
 
 
 
@@ -53,7 +60,6 @@ const AutoCompleteInput = ({
                     value={selectedVal}
                     onChange={handleChange}
                     onKeyUp={handler}
-                    onFocus={handleFocus}
                     className={styles.input}
                 />
             </div>
