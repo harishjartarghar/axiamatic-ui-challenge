@@ -15,6 +15,10 @@ const ProductsAddSection = () => {
     const { data, handleAdd, handleRemove, productsIds } = useProducts();
     const numberOfProducts = Object.keys(productsIds).length;
 
+    const handleNext = () => {
+        alert(`API DONE!!! ${numberOfProducts} Product Added`)
+    }
+
     return (
         <div className={styles.container}>
             <div>
@@ -31,7 +35,7 @@ const ProductsAddSection = () => {
                     handleRemove={handleRemove}
                     productsIds={productsIds}
                 />
-                <NextButton disabled={numberOfProducts < 1} />
+                <NextButton disabled={numberOfProducts < 1} onClick={handleNext} />
             </div>
         </div>)
 }

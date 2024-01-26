@@ -6,9 +6,9 @@ import { LABELS } from "@/base/constants/label.constants";
 
 import styles from './nextButton.module.scss'
 
-const NextButton = ({ disabled }) => {
+const NextButton = ({ disabled, onClick }) => {
     return (
-        <button className={cx(styles.container, { [styles.disabled]: disabled })}>
+        <button onClick={onClick} className={cx(styles.container, { [styles.disabled]: disabled })}>
             {LABELS.NEXT}
         </button>)
 }
@@ -16,9 +16,11 @@ const NextButton = ({ disabled }) => {
 export default NextButton
 
 NextButton.propTypes = {
-    disabled: PropTypes.bool
+    disabled: PropTypes.bool,
+    onClick: PropTypes.bool
 }
 
 NextButton.defaultProps = {
-    disabled: false
+    disabled: false,
+    onClick: () => { }
 }
