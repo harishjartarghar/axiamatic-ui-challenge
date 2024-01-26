@@ -1,4 +1,5 @@
 import React from "react"
+import PropTypes from "prop-types";
 
 import ProductWrapper from "../ProductWrapper";
 
@@ -25,4 +26,22 @@ const SelectedProduct = ({ product, onRemove }) => {
         </ProductWrapper>)
 }
 
-export default SelectedProduct
+export default SelectedProduct;
+
+SelectedProduct.propTypes = {
+    product: PropTypes.shape({
+        label: PropTypes.string,
+        image: PropTypes.string,
+        id: PropTypes.string
+    }),
+    onRemove: PropTypes.func
+}
+
+SelectedProduct.defaultProps = {
+    product: {
+        label: '',
+        image: '',
+        id: ''
+    },
+    onRemove: () => { }
+}

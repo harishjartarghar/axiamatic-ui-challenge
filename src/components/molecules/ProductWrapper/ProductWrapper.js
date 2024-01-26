@@ -1,6 +1,7 @@
 import React from "react"
+import PropTypes from "prop-types";
 
-import styles from './emptyProduct.module.scss';
+import styles from './productWrapper.module.scss';
 
 const ProductWrapper = ({ children }) => {
     return (
@@ -9,4 +10,12 @@ const ProductWrapper = ({ children }) => {
         </div>)
 }
 
-export default ProductWrapper
+export default ProductWrapper;
+
+ProductWrapper.propTypes = {
+    children: PropTypes.node
+}
+
+ProductWrapper.defaultProps = {
+    children: null
+}

@@ -3,8 +3,9 @@ import React from "react"
 import EmptyProduct from "@/components/molecules/EmptyProduct"
 import SelectedProduct from "@/components/molecules/SelectedProduct"
 
-import styles from './productSection.module.scss';
 import useProducts from "@/hooks/useProducts";
+
+import styles from './productSection.module.scss';
 
 const ProductsSection = () => {
     const { productsIds, handleRemove } = useProducts();
@@ -14,8 +15,11 @@ const ProductsSection = () => {
 
     return (
         <div className={styles.container}>
-            {productsIdsSelected.map((id) => (<SelectedProduct key={id} product={productsIds[id]} onRemove={handleRemove} />))}
-            {Array.from({ length: 4 - numberOfProducts }, (id, index) => <EmptyProduct key={index} />)}
+            <div className={styles.gridContainer}>
+                {productsIdsSelected.map((id) => (<SelectedProduct key={id} product={productsIds[id]} onRemove={handleRemove} />))}
+                {Array.from({ length: 4 - numberOfProducts }, (id, index) => <EmptyProduct key={index} />)}
+            </div>
+            <p className={styles.count}>{`${numberOfProducts} Product Added`}</p>
         </div>
     )
 }

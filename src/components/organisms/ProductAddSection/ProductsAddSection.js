@@ -1,23 +1,38 @@
 import React from "react"
 
 import StepCounter from "@/components/atoms/StepCounter"
-import AutoCompleteInput from "@/components/molecules/AutoComplete/AutoComplete"
+import AutoCompleteInput from "@/components/molecules/AutoComplete"
+
 import useProducts from "@/hooks/useProducts"
+
+import NextButton from "@/components/atoms/NextButton";
+
+import { LABELS } from "@/base/constants/label.constants";
 
 import styles from './productAddSection.module.scss';
 
 const ProductsAddSection = () => {
-    const { data, handleAdd, productsIds } = useProducts()
+    const { data, handleAdd, handleRemove, productsIds } = useProducts();
+    const numberOfProducts = Object.keys(productsIds).length;
+
     return (
-        <div>
-            <StepCounter />
-            <p className={styles.heading}>Let's Add your internal tools</p>
-            <p className={styles.subHeading}>Search to quickly add products your team used today. <br />You will be able to add as many, as you need later but for <br /> now lets add four.</p>
-            <AutoCompleteInput
-                data={data}
-                onSelected={handleAdd}
-                productsIds={productsIds}
-            />
+        <div className={styles.container}>
+            <div>
+                <StepCounter />
+            </div>
+            <div>
+                <p className={styles.heading}>{LABELS.HEADING}</p>
+                <p className={styles.subHeading}>{LABELS.SUB_HEADING}</p>
+            </div>
+            <div className={styles.inputButtonContainer}>
+                <AutoCompleteInput
+                    data={data}
+                    handleClick={handleAdd}
+                    handleRemove={handleRemove}
+                    productsIds={productsIds}
+                />
+                <NextButton disabled={numberOfProducts < 1} />
+            </div>
         </div>)
 }
 

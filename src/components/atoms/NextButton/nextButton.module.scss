@@ -1,0 +1,17 @@
+.container {
+    border: none;
+    width: 100%;
+    z-index: 10;
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+    background-color: #4444FF;
+    font-size: 16px;
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.disabled {
+    background-color: #C3CEDA;
+    cursor: not-allowed;
+}
