@@ -8,7 +8,7 @@ import styles from './nextButton.module.scss'
 
 const NextButton = ({ disabled, onClick }) => {
     return (
-        <button onClick={onClick} className={cx(styles.container, { [styles.disabled]: disabled })}>
+        <button onClick={onClick} disabled={disabled} className={cx(styles.container, { [styles.disabled]: disabled })}>
             {LABELS.NEXT}
         </button>)
 }

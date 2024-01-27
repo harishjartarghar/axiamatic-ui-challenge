@@ -7,13 +7,13 @@ const INTERNAL_TOOLS = [
     {
         id: "notionDumy",
         label: "Notion Dummy",
-        image: "https://assets.stickpng.com/images/58482f8fcef1014c0b5e4a85.png"
+        image: "https://seeklogo.com/images/R/react-logo-7B3CE81517-seeklogo.com.png"
 
     },
     {
         id: "notionDumy2",
         label: "Notion Dummy 2",
-        image: "https://assets.stickpng.com/images/58482f8fcef1014c0b5e4a85.png"
+        image: "https://seeklogo.com/images/R/react-logo-7B3CE81517-seeklogo.com.png"
 
     },
     {
@@ -24,7 +24,7 @@ const INTERNAL_TOOLS = [
     {
         id: "microsoft2",
         label: "Microsoft Dummy",
-        image: "https://assets.stickpng.com/images/58482f8fcef1014c0b5e4a85.png",
+        image: "https://seeklogo.com/images/R/react-logo-7B3CE81517-seeklogo.com.png",
     },
     {
         id: "jira",
